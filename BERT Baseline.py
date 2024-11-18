@@ -1,9 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[20]:
-
-
 import torch
 from torch.utils.data import DataLoader, Dataset
 from torch.optim import AdamW
@@ -119,7 +113,7 @@ print("Empathy Pearson Score:", pearson_empathy)
 print("Average Pearson Score:", average_pearson)
 
 
-# In[ ]:
+
 
 
 
