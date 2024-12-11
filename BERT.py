@@ -22,9 +22,6 @@ for col in ['Emotion', 'EmotionalPolarity', 'Empathy']:
 train_data = train_data.dropna(subset=['Emotion', 'EmotionalPolarity', 'Empathy']).reset_index(drop=True)
 dev_data = dev_data.dropna(subset=['Emotion', 'EmotionalPolarity', 'Empathy']).reset_index(drop=True)
 
-train_data = train_data.sample(n=500, random_state=4400)  # 500 samples for training
-dev_data = dev_data.sample(n=100, random_state=4400)  # 100 samples for validation
-
 class ConversationDataset(Dataset):
     def __init__(self, data, tokenizer, max_length=128):
         self.data = data
