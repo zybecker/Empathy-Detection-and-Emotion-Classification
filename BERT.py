@@ -1,8 +1,6 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[1]:
-
 
 import torch
 from torch.utils.data import DataLoader, Dataset
@@ -59,7 +57,7 @@ dev_dataset = ConversationDataset(dev_data, tokenizer)
 train_loader = DataLoader(train_dataset, batch_size=16, shuffle=True)
 dev_loader = DataLoader(dev_dataset, batch_size=16, shuffle=False)
 
-# pretrained model
+#model
 model = BertForSequenceClassification.from_pretrained('bert-base-uncased', num_labels=3)
 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
@@ -118,16 +116,12 @@ print("Empathy Pearson Score:", pearson_empathy)
 print("Average Pearson Score:", average_pearson)
 
 
-# In[2]:
-
 
 # Examine the ranges and distributions of the labels
 print(train_data[['Emotion', 'EmotionalPolarity', 'Empathy']].describe())
 
 
-# In[4]:
-
-
+#apply to the goldstandard test data
 test_data = pd.read_csv('goldstandard_CONVT.csv', on_bad_lines='skip')
 
 for col in ['Emotion', 'EmotionalPolarity', 'Empathy']:
