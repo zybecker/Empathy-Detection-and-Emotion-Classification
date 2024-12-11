@@ -8,4 +8,5 @@ Ensure that you have the GloVe embeddings for the bi-LSTM.
 
 
 
-# Presentation slides: https://docs.google.com/presentation/d/1zGCzWQOSq65DU1jsvgT0_-tc_Q2kzyKueVy-x_LumBI/edit?usp=sharing
+Presentation slides: https://docs.google.com/presentation/d/1zGCzWQOSq65DU1jsvgT0_-tc_Q2kzyKueVy-x_LumBI/edit?usp=sharing
+
